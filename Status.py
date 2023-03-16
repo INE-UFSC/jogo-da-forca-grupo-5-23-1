@@ -27,5 +27,5 @@ class Status():
         else:
             self.__letras_utilizadas.append(letra)
             self.__qtd_erros += 1
-        return
+        return self.__qtd_erros
     

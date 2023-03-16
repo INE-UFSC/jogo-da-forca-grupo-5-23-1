@@ -4,7 +4,6 @@ class Engine():
         self.__acertou = bool()
         self.__repetida = bool()
         self.__letra = str
-        self.__letras_multiplas = bool()
         
     '''
     Verifica se a letra já foi utilizada, e se a letra está contida na palavra ou não.
@@ -19,7 +18,6 @@ class Engine():
     '''
     def verifica(self, letra: str(), letras_utilizadas: list(), palavra_atual: str()):
         self.__letra = letra
-        if len(self.__letra) > 1: self.__letras_multiplas = True
         if self.__letra not in letras_utilizadas:
             self.__repetida = False
             if self.__letra in palavra_atual:
@@ -41,7 +39,4 @@ class Engine():
     
     def get_repetida(self): #Retorna se a letra já foi proposta pelo usuário anteriormente
         return self.__repetida
-    
-    def get_letras_multiplas(self): # Retorna se o jogador digitou mais de uma letra
-        return self.__letras_multiplas
     

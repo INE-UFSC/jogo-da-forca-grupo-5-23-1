@@ -25,7 +25,7 @@ while status.get_qtd_erros() < 6:
         letra_in = input('Digite uma letra não repetida:')
         engine.verifica(letra_in, status.get_letras_utilizadas(), status.get_palavra_oculta())
     
-    if engine.get_letras_multiplas() == True: 
+    if len(letra_in) > 1: 
         print('Digite apenas uma letra por vez!')
     else:
         erros = status.atualiza(engine.get_letra(), engine.get_acerto())

@@ -35,8 +35,10 @@ while status.get_qtd_erros() < 6:
 if win == True:
     print('Parabéns, você ganhou!')
 else:
+    boneco.atualizar_forca(6)
+    print(boneco.desenhar())
     print('Fim de jogo!')
-print(f'A palavra era {palavra}')
+print(f'A palavra era {palavra.capitalize()}')
     
     
     

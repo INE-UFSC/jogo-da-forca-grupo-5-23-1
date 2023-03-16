@@ -19,6 +19,6 @@ class Interface():
     def inicializa(self):
         print(self.__forca.desenhar())
         print(' '.join(self.__tentativa_atual))
-        print('Letras já utilizadas:' + ' '.join(self.__letras_utilizadas))
-        print('Digite uma letra:')
+        print('Letras já utilizadas:' + ', '.join(self.__letras_utilizadas))
+        print('Digite uma letra: ')
         return

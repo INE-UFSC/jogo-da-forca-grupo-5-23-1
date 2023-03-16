@@ -20,15 +20,16 @@ while status.get_qtd_erros() < 6:
     letra_in = input()
     
     engine.verifica(letra_in, status.get_letras_utilizadas(), status.get_palavra_oculta())
-    
-    if engine.get_letras_multiplas() == True: print('Digite apenas uma letra por vez!')
 
     while engine.get_repetida() == True:
         letra_in = input('Digite uma letra não repetida:')
         engine.verifica(letra_in, status.get_letras_utilizadas(), status.get_palavra_oculta())
     
-    erros = status.atualiza(engine.get_letra(), engine.get_acerto())
-    boneco.atualizar_forca(erros)
+    if engine.get_letras_multiplas() == True: 
+        print('Digite apenas uma letra por vez!')
+    else:
+        erros = status.atualiza(engine.get_letra(), engine.get_acerto())
+        boneco.atualizar_forca(erros)
     
     if ' '.join(status.get_tentativa_atual()).replace(' ', '') == status.get_palavra_oculta():
         win = True

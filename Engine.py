@@ -66,7 +66,7 @@ class Engine():
     def get_repetida(self): #Retorna se a letra já foi proposta pelo usuário anteriormente
         return self.__repetida
 
-    def jogar(self): # Parte que aparece/interage para/com o jogador
+    def interacao(self): # Parte que aparece/interage para/com o jogador
         palavra_oculta = "_" * len(self.palavra_atual)
         letras_erradas = ""
         tentativas = 6
